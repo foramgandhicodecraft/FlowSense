@@ -2,6 +2,36 @@
 
 FlowSense is a premium, full-stack AI-powered cash flow intelligence web app designed specifically for Indian SMEs. It analyzes past transactions and predicts future cash flow for the next 30, 60, and 90 days using an advanced **LSTM + XGBoost Engine**, warning business owners about cash shortages before they happen and recommending smart borrowing actions.
 
+## About FlowSense
+
+FlowSense is an AI-powered cash flow intelligence platform built for India's 63 million 
+SMEs. Most small business owners discover cash problems only when their account hits zero 
+- by then, emergency loans at 24–36% interest are the only option. FlowSense solves this 
+by predicting cash flow problems 3–4 weeks before they happen.
+
+### How It Works
+
+Business owners connect their GST account, bank statements, and UPI history via a simple 
+one-tap flow. Our LSTM-based forecasting engine analyzes 90 days of transaction history 
+and generates 30, 60, and 90-day cash flow projections with confidence intervals. An 
+XGBoost scoring model evaluates loan readiness based on income consistency, GST 
+compliance, and expense patterns.
+
+### Key Features
+
+- 90-day AI cash flow forecast with risk zone indicators
+- Early warning alerts fired 3–4 weeks before a predicted cash gap
+- Loan readiness score with personalized borrowing recommendations
+- Smart alerts via dashboard (WhatsApp integration roadmap)
+- CSV transaction upload for instant analysis
+
+### Impact
+
+A business warned 4 weeks early can arrange an overdraft at 10–14% instead of 
+an emergency loan at 36% - saving ₹2–5 lakhs per year. FlowSense gives every 
+kirana shop and MSME the financial visibility that was previously only available 
+to large enterprises.
+
 ## Technology Stack
 
 * **Frontend:** React, React Router, Tailwind CSS, Recharts, Axios
