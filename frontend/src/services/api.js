@@ -40,7 +40,7 @@ export const uploadCSV = async (file) => {
 export const getForecast = async (force = false) => {
   const userId = localStorage.getItem('user_id');
   if (force) {
-    const res = await api.post(`/forecast/generate?user_id=${userId}`);
+    await api.post(`/forecast/generate?user_id=${userId}`);
     // fetch again after generate
     const res2 = await api.get(`/forecast?user_id=${userId}`);
     return res2.data;

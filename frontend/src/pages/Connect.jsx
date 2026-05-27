@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Landmark, FileText, Smartphone, Upload, CheckCircle, Database } from 'lucide-react';
+import { Landmark, FileText, Smartphone, Upload, CheckCircle } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { uploadCSV } from '../services/api';
 

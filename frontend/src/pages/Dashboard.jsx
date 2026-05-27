@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { getForecast, getTransactions, getAlerts } from '../services/api';
 import CashGapAlert from '../components/CashGapAlert';
 import ForecastChart from '../components/ForecastChart';
-import { ArrowUpRight, ArrowDownRight, Wallet, TrendingUp, AlertCircle, Calendar } from 'lucide-react';
+import { Wallet, TrendingUp, AlertCircle, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Dashboard = () => {
