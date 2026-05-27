@@ -37,16 +37,6 @@ export const uploadCSV = async (file) => {
   return res.data;
 };
 
-export const uploadDemoData = async (transactions) => {
-  const userId = localStorage.getItem('user_id');
-  let added = 0;
-  for (const t of transactions) {
-    await api.post('/transactions/add', { ...t, user_id: userId });
-    added++;
-  }
-  return { success: true, added };
-};
-
 export const getForecast = async (force = false) => {
   const userId = localStorage.getItem('user_id');
   if (force) {

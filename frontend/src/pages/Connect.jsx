@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Landmark, FileText, Smartphone, Upload, CheckCircle, Database } from 'lucide-react';
 import toast from 'react-hot-toast';
-import { uploadCSV, uploadDemoData } from '../services/api';
+import { uploadCSV } from '../services/api';
 
 const Connect = () => {
   const navigate = useNavigate();
@@ -12,16 +12,14 @@ const Connect = () => {
     gst: false,
     bank: false,
     upi: false,
-    csv: false,
-    demo: false
+    csv: false
   });
   
   const [loading, setLoading] = useState({
     gst: false,
     bank: false,
     upi: false,
-    csv: false,
-    demo: false
+    csv: false
   });
 
   const handleConnect = (type) => {
@@ -51,58 +49,7 @@ const Connect = () => {
     }
   };
 
-  const loadDemoData = async () => {
-    setLoading({ ...loading, demo: true });
-    
-    // Generate realistic demo data for a textile shop
-    const demoTxs = [];
-    let currentDate = new Date();
-    currentDate.setDate(currentDate.getDate() - 90); // start 90 days ago
-    
-    for (let i = 0; i < 90; i++) {
-      const d = new Date(currentDate);
-      d.setDate(d.getDate() + i);
-      const dateStr = d.toISOString().split('T')[0];
-      
-      // Weekly customer payment
-      if (i % 7 === 0) {
-        demoTxs.push({ date: dateStr, description: 'Customer Payment - Retail', amount: 45000, category: 'income', source: 'upi' });
-      }
-      if (i % 7 === 3) {
-        demoTxs.push({ date: dateStr, description: 'B2B Client Transfer', amount: 80000, category: 'income', source: 'bank' });
-      }
-      
-      // Monthly supplier payment
-      if (i % 30 === 5) {
-        demoTxs.push({ date: dateStr, description: 'Mehta Fabrics - Raw Material', amount: -110000, category: 'raw_material', source: 'bank' });
-      }
-      
-      // Monthly GST
-      if (i % 30 === 15) {
-        demoTxs.push({ date: dateStr, description: 'GST Payment', amount: -22000, category: 'tax', source: 'gst' });
-      }
-      
-      // Salary
-      if (i % 15 === 0) {
-        demoTxs.push({ date: dateStr, description: 'Staff Salary Transfer', amount: -35000, category: 'salary', source: 'bank' });
-      }
-      
-      // Utilities
-      if (i % 30 === 10) {
-        demoTxs.push({ date: dateStr, description: 'Electricity Bill', amount: -5500, category: 'utility', source: 'bank' });
-      }
-    }
-    
-    try {
-      await uploadDemoData(demoTxs);
-      setConnections({ ...connections, demo: true });
-      toast.success('Demo data loaded successfully!');
-    } catch (error) {
-      toast.error('Failed to load demo data');
-    } finally {
-      setLoading({ ...loading, demo: false });
-    }
-  };
+
 
   const hasAnyConnection = Object.values(connections).some(v => v);
 
@@ -195,13 +142,7 @@ const Connect = () => {
             {loading.csv ? 'Uploading...' : <><Upload size={18} /> Upload CSV Instead</>}
           </button>
           
-          <button 
-            onClick={loadDemoData}
-            disabled={loading.demo}
-            className="px-6 py-3 rounded-xl border border-accentBlue text-accentBlue hover:bg-accentBlue/10 flex items-center gap-2 transition-colors"
-          >
-            {loading.demo ? 'Loading Data...' : <><Database size={18} /> Use Demo Data</>}
-          </button>
+
         </div>
 
         <div className="mt-16 text-center">
