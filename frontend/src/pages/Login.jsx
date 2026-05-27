@@ -72,6 +72,10 @@ const Login = () => {
             {!loading && <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />}
           </button>
         </form>
+        
+        <p className="text-center text-xs text-textSecondary mt-8">
+          Any 10-digit number works for this demo
+        </p>
       </div>
     </div>
   );
