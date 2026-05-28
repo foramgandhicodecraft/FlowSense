@@ -34,7 +34,7 @@ to large enterprises.
 
 ## Technology Stack
 
-* **Frontend:** React, React Router, Tailwind CSS, Recharts, Axios
+* **Frontend:** React, React Router, Tailwind CSS, Recharts
 * **Backend:** Flask (Python), SQLAlchemy
 * **Database:** PostgreSQL
 * **AI/Analysis Engine:** LSTM Model + XGBoost for forecasting and credit scoring
