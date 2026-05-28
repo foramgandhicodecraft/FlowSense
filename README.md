@@ -126,3 +126,7 @@ To see the platform's full capabilities without providing real transaction data:
 * `GET /api/loan-score` - Get loan readiness score and recommended products
 * `GET /api/alerts` - Get all smart alerts for the user
 * `POST /api/alerts/mark-read` - Mark all alerts as read
+
+## Why FlowSense Matters?
+
+In the Indian MSME ecosystem, cash flow isn't just a metric, it's survival. Most small businesses don't fail because they lack profitability, they fail because of a timing mismatch between paying suppliers and collecting receivables. By converting fragmented bank statements, UPI histories, and GST filings into a predictive early-warning system, FlowSense shifts business owners from reactive firefighting to proactive financial planning. Giving a kirana shop or a textile manufacturer a 4-week heads-up on a cash deficit completely changes their leverage, allowing them to secure stable bank overdrafts at 12% instead of resorting to predatory emergency loans at 36%. It’s elite corporate financial intelligence, democratized for India’s engine of growth.
